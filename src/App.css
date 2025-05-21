@@ -1,0 +1,46 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.chatbox {
+  border: 1px solid #ccc;
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  overflow-y: scroll;
+  background-color: #f9f9f9;
+}
+
+.user {
+  text-align: right;
+  margin: 5px;
+  color: blue;
+}
+
+.bot {
+  text-align: left;
+  margin: 5px;
+  color: green;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  width: 200px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
