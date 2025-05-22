@@ -2,7 +2,7 @@
   "name": "chatbot-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://connie-atieno.github.io/chatbot-app/",
+  "homepage": "https://connie-atieno.github.io/chatbot-app",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
