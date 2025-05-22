@@ -27,26 +27,31 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Chatbot 🤖</h1>
-      <div className="chatbox">
-        {messages.map((msg, index) => (
-          <div key={index} className={msg.sender}>
-            {msg.text}
-          </div>
-        ))}
+    <div className="chat-container">
+  <div className="chat-header">MentorBot 💬</div>
+  
+  <div className="chat-messages">
+    {messages.map((msg, index) => (
+      <div
+        key={index}
+        className={`message ${msg.sender === 'user' ? 'user' : 'bot'}`}
+      >
+        {msg.text}
       </div>
-      <div className="input-area">
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-          placeholder="Type your message..."
-        />
-        <button onClick={handleSend}>Send</button>
-      </div>
-    </div>
+    ))}
+  </div>
+
+  <div className="chat-input">
+    <input
+      type="text"
+      value={input}
+      onChange={handleInputChange}
+      placeholder="Ask me anything..."
+    />
+    <button onClick={handleSend}>Send</button>
+  </div>
+</div>
+
   );
 }
 
