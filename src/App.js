@@ -1,3 +1,4 @@
+import './App.css';
 import React, { useState } from "react";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <div className="chat-container">
-      <div className="chat-box">
+      <div className="chat-messages">
         {/* Your chat messages will go here */}
       </div>
       <div className="chat-input">
