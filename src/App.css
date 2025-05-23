@@ -1,6 +1,7 @@
 /* App.css */
 
 body {
+  background-color: red;
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
