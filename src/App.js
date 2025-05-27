@@ -11,9 +11,15 @@ function App() {
 
   const handleSend = () => {
     if (input.trim() === "") return;
-    setMessages([...messages, { text: input, sender: "user" }]);
+    const userMessage = { text: input, sender: "user" };
+    setMessages(prev => [...prev, userMessage]);
     setInput("");
-    // You can add bot response logic here if needed
+
+    // Simple bot reply after user sends a message
+    setTimeout(() => {
+      const botMessage = { text: "Hello! This is a bot reply.", sender: "bot" };
+      setMessages(prev => [...prev, botMessage]);
+    }, 500);
   };
 
   const handleKeyDown = (e) => {
