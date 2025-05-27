@@ -16,10 +16,12 @@ function App() {
     setInput("");
 
     // Simple bot reply after user sends a message
-    setTimeout(() => {
-      const botMessage = { text: "Hello! This is a bot reply.", sender: "bot" };
-      setMessages(prev => [...prev, botMessage]);
-    }, 500);
+    // ...existing code...
+setTimeout(() => {
+  const botMessage = { text: "Hello! This is a bot reply.", sender: "bot" };
+  setMessages(prevMessages => [...prevMessages, botMessage]);
+}, 500);
+// ...existing code...
   };
 
   const handleKeyDown = (e) => {
