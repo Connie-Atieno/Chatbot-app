@@ -15,13 +15,10 @@ function App() {
     setMessages(prev => [...prev, userMessage]);
     setInput("");
 
-    // Simple bot reply after user sends a message
-    // ...existing code...
-setTimeout(() => {
-  const botMessage = { text: "Hello! This is a bot reply.", sender: "bot" };
-  setMessages(prevMessages => [...prevMessages, botMessage]);
-}, 500);
-// ...existing code...
+    setTimeout(() => {
+      const botMessage = { text: "Hello! This is a bot reply.", sender: "bot" };
+      setMessages(prevMessages => [...prevMessages, botMessage]);
+    }, 500);
   };
 
   const handleKeyDown = (e) => {
@@ -34,10 +31,7 @@ setTimeout(() => {
     <div className="chat-container">
       <div className="chat-box">
         {messages.map((msg, idx) => (
-          <div
-            key={idx}
-            className={`message ${msg.sender}`}
-          >
+          <div key={idx} className={`message ${msg.sender}`}>
             {msg.text}
           </div>
         ))}
